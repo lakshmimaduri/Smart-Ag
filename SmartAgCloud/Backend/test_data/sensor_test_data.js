@@ -219,4 +219,114 @@
         value: null
     },
 },
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 372,
+    y_coordinate: 82,
+    data: {
+        timestamp: ISODate("2018-06-30T00:00:01Z"),
+        // type: "nutrition",
+        value: 5.5
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 23,
+    y_coordinate: 94,
+    data: {
+        timestamp: ISODate("2018-06-30T02:00:01Z"),
+        // type: "nutrition",
+        value: 4.5
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 48,
+    y_coordinate: 329,
+    data: {
+        timestamp: ISODate("2018-06-30T02:00:01Z"),
+        // type: "nutrition",
+        value: 6.1
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "off",
+    x_coordinate: 53,
+    y_coordinate: 63,
+    data: {
+        timestamp: ISODate("2018-06-30T03:00:01Z"),
+        // type: "nutrition",
+        value: null
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 2,
+    y_coordinate: 742,
+    data: {
+        timestamp: ISODate("2018-06-30T05:00:01Z"),
+        // type: "nutrition",
+        value: 7.1
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 42,
+    y_coordinate: 33,
+    data: {
+        timestamp: ISODate("2018-06-30T06:00:01Z"),
+        // type: "nutrition",
+        value: 5.3
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "maintenance",
+    x_coordinate: 245,
+    y_coordinate: 74,
+    data: {
+        timestamp: ISODate("2018-06-30T08:00:01Z"),
+        // type: "nutrition",
+        value: null
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 91,
+    y_coordinate: 600,
+    data: {
+        timestamp: ISODate("2018-06-30T10:00:01Z"),
+        // type: "nutrition",
+        value: 6.3
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 813,
+    y_coordinate: 32,
+    data: {
+        timestamp: ISODate("2018-06-30T12:00:01Z"),
+        // type: "nutrition",
+        value: 8.2
+    },
+},
+{
+    sensorType: "nutrition",
+    status: "on",
+    x_coordinate: 73,
+    y_coordinate: 35,
+    data: {
+        timestamp: ISODate("2018-06-30T13:00:01Z"),
+        // type: "nutrition",
+        value: 7.7
+    },
+},
 ]
