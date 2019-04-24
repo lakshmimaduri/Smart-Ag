@@ -329,4 +329,114 @@
         value: 7.7
     },
 },
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 34,
+    y_coordinate: 473,
+    data: {
+        timestamp: ISODate("2018-06-30T17:00:01Z"),
+        // type: "moisture",
+        value: 30.39
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 23,
+    y_coordinate: 13,
+    data: {
+        timestamp: ISODate("2018-06-30T18:00:01Z"),
+        // type: "moisture",
+        value: 24.06
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 9,
+    y_coordinate: 76,
+    data: {
+        timestamp: ISODate("2018-06-30T20:00:01Z"),
+        // type: "moisture",
+        value: 30.33
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 28,
+    y_coordinate: 23,
+    data: {
+        timestamp: ISODate("2018-06-30T21:00:01Z"),
+        // type: "moisture",
+        value: 23.81
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 251,
+    y_coordinate: 765,
+    data: {
+        timestamp: ISODate("2018-06-30T23:00:01Z"),
+        // type: "moisture",
+        value: 27.56
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 12,
+    y_coordinate: 64,
+    data: {
+        timestamp: ISODate("2018-07-01T03:00:01Z"),
+        // type: "moisture",
+        value: 19.47
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 39,
+    y_coordinate: 623,
+    data: {
+        timestamp: ISODate("2018-07-01T04:00:01Z"),
+        // type: "moisture",
+        value: 26.64
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 345,
+    y_coordinate: 64,
+    data: {
+        timestamp: ISODate("2018-07-01T06:00:01Z"),
+        // type: "moisture",
+        value: 19.44
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 54,
+    y_coordinate: 4,
+    data: {
+        timestamp: ISODate("2018-07-01T07:00:01Z"),
+        // type: "moisture",
+        value: 31.68
+    },
+},
+{
+    sensorType: "moisture",
+    status: "on",
+    x_coordinate: 39,
+    y_coordinate: 329,
+    data: {
+        timestamp: ISODate("2018-07-01T10:00:01Z"),
+        // type: "moisture",
+        value: 24.31
+    },
+},
 ]
