@@ -9,7 +9,7 @@
     city: "city1",
     state: "state1",
     county: "county1",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer1.jpg",
+    img: "https://previews.123rf.com/images/hermandesign2015/hermandesign20151706/hermandesign2015170600062/79452046-cartoon-young-farmer-holding-rake.jpg",
     ID: 1
 },
 {
@@ -22,7 +22,7 @@
     city: "city2",
     state: "state2",
     county: "county2",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer2.jpg",
+    img: "https://fscomps.fotosearch.com/compc/CSP/CSP747/cartoon-farmer-holding-a-rake-clipart__k25862630.jpg",
     ID: 2
 },
 {
@@ -35,7 +35,7 @@
     city: "city3",
     state: "state3",
     county: "county3",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer3.jpg",
+    img: "https://fscomps.fotosearch.com/compc/CSP/CSP747/cartoon-farmer-holding-a-rake-clipart__k25862630.jpg",
     ID: 3
 },
 {
@@ -48,7 +48,7 @@
     city: "city4",
     state: "state4",
     county: "county4",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer4.jpg",
+    img: "https://previews.123rf.com/images/lawangdesign/lawangdesign1608/lawangdesign160800009/63132421-cartoon-young-farmer-holding-rake.jpg",
     ID: 4
 },
 {
@@ -61,7 +61,7 @@
     city: "city5",
     state: "state5",
     county: "county5",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer5.jpg",
+    img: "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX24560947.jpg",
     ID: 5
 },
 {
@@ -74,7 +74,7 @@
     city: "city6",
     state: "state6",
     county: "county6",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer6.jpg",
+    img: "https://91b6be3bd2294a24b7b5-da4c182123f5956a3d22aa43eb816232.ssl.cf1.rackcdn.com/contentItem-1595389-8065286-7n6suyy1y3mwo-or.png",
     ID: 6
 },
 {
@@ -87,7 +87,7 @@
     city: "city7",
     state: "state7",
     county: "county7",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/iot1.jpg",
+    img: "https://www.normannerds.com/images/happycustomer2.jpg",
     ID: 7
 },
 {
@@ -100,7 +100,7 @@
     city: "city8",
     state: "state8",
     county: "county8",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer8.jpg",
+    img: "https://www.featurepics.com/StockImage/20100416/cartoon-farmer-garden-stock-illustration-1510971.jpg",
     ID: 8
 },
 {
@@ -113,7 +113,7 @@
     city: "city9",
     state: "state9",
     county: "county9",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer9.jpg",
+    img: "https://c8.alamy.com/comp/E5K63B/farmer-and-rice-a-harvest-vector-illustration-cartoon-E5K63B.jpg",
     ID: 9
 },
 {
@@ -126,7 +126,7 @@
     city: "city10",
     state: "state10",
     county: "county10",
-    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer10.jpg",
+    img: "https://www.featurepics.com/StockImage/20110125/cartoon-manager-stock-illustration-1768084.jpg",
     ID: 10
 }
 ]
