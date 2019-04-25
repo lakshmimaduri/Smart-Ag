@@ -8,7 +8,9 @@
     lastName: "lastname1",
     city: "city1",
     state: "state1",
-    county: "county1"
+    county: "county1",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer1.jpg",
+    ID: 1
 },
 {
     username: "user2",
@@ -19,7 +21,9 @@
     lastName: "lastname2",
     city: "city2",
     state: "state2",
-    county: "county2"
+    county: "county2",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer2.jpg",
+    ID: 2
 },
 {
     username: "user3",
@@ -30,7 +34,9 @@
     lastName: "lastname3",
     city: "city3",
     state: "state3",
-    county: "county3"
+    county: "county3",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer3.jpg",
+    ID: 3
 },
 {
     username: "user4",
@@ -41,7 +47,9 @@
     lastName: "lastname4",
     city: "city4",
     state: "state4",
-    county: "county4"
+    county: "county4",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer4.jpg",
+    ID: 4
 },
 {
     username: "user5",
@@ -52,7 +60,9 @@
     lastName: "lastname5",
     city: "city5",
     state: "state5",
-    county: "county5"
+    county: "county5",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer5.jpg",
+    ID: 5
 },
 {
     username: "user6",
@@ -63,7 +73,9 @@
     lastName: "lastname6",
     city: "city6",
     state: "state6",
-    county: "county6"
+    county: "county6",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer6.jpg",
+    ID: 6
 },
 {
     username: "user7",
@@ -74,7 +86,9 @@
     lastName: "lastname7",
     city: "city7",
     state: "state7",
-    county: "county7"
+    county: "county7",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/iot1.jpg",
+    ID: 7
 },
 {
     username: "user8",
@@ -85,7 +99,9 @@
     lastName: "lastname8",
     city: "city8",
     state: "state8",
-    county: "county8"
+    county: "county8",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer8.jpg",
+    ID: 8
 },
 {
     username: "user9",
@@ -96,7 +112,9 @@
     lastName: "lastname9",
     city: "city9",
     state: "state9",
-    county: "county9"
+    county: "county9",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer9.jpg",
+    ID: 9
 },
 {
     username: "user10",
@@ -107,6 +125,8 @@
     lastName: "lastname10",
     city: "city10",
     state: "state10",
-    county: "county10"
+    county: "county10",
+    img: "https://github.com/lakshmimaduri/Smart-Ag/blob/wenyan-dev/SmartAgCloud/images/farmer10.jpg",
+    ID: 10
 }
 ]
