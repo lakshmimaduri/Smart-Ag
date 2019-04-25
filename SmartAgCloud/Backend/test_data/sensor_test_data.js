@@ -9,6 +9,9 @@
         // type: "humidity",
         value: 12.23
     },
+    farmerID: 1,
+    nodeID: 1,
+    ID: 1
 },
 {
     sensorType: "humidity",
@@ -20,6 +23,9 @@
         // type: "humidity",
         value: 21.59
     }
+    farmerID: 2,
+    nodeID: 2,
+    ID: 2
 },
 {
     sensorType: "humidity",
@@ -31,6 +37,9 @@
         // type: "humidity",
         value: null
     },
+    farmerID: 1,
+    nodeID: 3,
+    ID: 3
 },
 {
     sensorType: "humidity",
@@ -42,6 +51,9 @@
         // type: "humidity",
         value: null
     },
+    farmerID: 2,
+    nodeID: 4,
+    ID: 4
 },
 {
     sensorType: "humidity",
@@ -53,6 +65,9 @@
         // type: "humidity",
         value: 8.27
     },
+    farmerID: 3,
+    nodeID: 5,
+    ID: 5
 },
 {
     sensorType: "humidity",
@@ -64,6 +79,9 @@
         // type: "humidity",
         value: null
     },
+    farmerID: 2,
+    nodeID: 6,
+    ID: 6
 },
 {
     sensorType: "humidity",
@@ -75,6 +93,9 @@
         // type: "humidity",
         value: null
     },
+    farmerID: 3,
+    nodeID: 7,
+    ID: 7
 },
 {
     sensorType: "humidity",
@@ -86,6 +107,9 @@
         // type: "humidity",
         value: 23.29
     },
+    farmerID: 1,
+    nodeID: 8,
+    ID: 8
 },
 {
     sensorType: "humidity",
@@ -97,6 +121,9 @@
         // type: "humidity",
         value: 19.23
     },
+    farmerID: 2,
+    nodeID: 9,
+    ID: 9
 },
 {
     sensorType: "humidity",
@@ -108,6 +135,9 @@
         // type: "humidity",
         value: 15.87
     },
+    farmerID: 3,
+    nodeID: 10,
+    ID: 10
 },
 {
     sensorType: "temperature",
@@ -119,6 +149,9 @@
         // type: "temperature",
         value: 0.83
     },
+    farmerID: 3,
+    nodeID: 1,
+    ID: 11
 },
 {
     sensorType: "temperature",
@@ -130,6 +163,9 @@
         // type: "temperature",
         value: 4.12
     },
+    farmerID: 1,
+    nodeID: 2,
+    ID: 12
 },
 {
     sensorType: "temperature",
@@ -141,6 +177,9 @@
         // type: "temperature",
         value: null
     },
+    farmerID: 1,
+    nodeID: 3,
+    ID: 13
 },
 {
     sensorType: "temperature",
@@ -152,6 +191,9 @@
         // type: "temperature",
         value: null
     },
+    farmerID: 2,
+    nodeID: 4,
+    ID: 14
 },
 {
     sensorType: "temperature",
@@ -163,6 +205,9 @@
         // type: "temperature",
         value: 19.68
     },
+    farmerID: 3,
+    nodeID: 5,
+    ID: 15
 },
 {
     sensorType: "temperature",
@@ -174,6 +219,9 @@
         // type: "temperature",
         value: 4.26
     },
+    farmerID: 2,
+    nodeID: 6,
+    ID: 16
 },
 {
     sensorType: "temperature",
@@ -185,6 +233,9 @@
         // type: "temperature",
         value: null
     },
+    farmerID: 1,
+    nodeID: 7,
+    ID: 17
 },
 {
     sensorType: "temperature",
@@ -196,6 +247,9 @@
         // type: "temperature",
         value: 11.93
     },
+    farmerID: 2,
+    nodeID: 8,
+    ID: 18
 },
 {
     sensorType: "temperature",
@@ -207,6 +261,9 @@
         // type: "temperature",
         value: 13.48
     },
+    farmerID: 1,
+    nodeID: 9,
+    ID: 19
 },
 {
     sensorType: "temperature",
@@ -218,6 +275,9 @@
         // type: "temperature",
         value: null
     },
+    farmerID: 3,
+    nodeID: 10,
+    ID: 20
 },
 {
     sensorType: "nutrition",
@@ -229,6 +289,9 @@
         // type: "nutrition",
         value: 5.5
     },
+    farmerID: 1,
+    nodeID: 1,
+    ID: 21
 },
 {
     sensorType: "nutrition",
@@ -240,6 +303,9 @@
         // type: "nutrition",
         value: 4.5
     },
+    farmerID: 2,
+    nodeID: 2,
+    ID: 22
 },
 {
     sensorType: "nutrition",
@@ -251,6 +317,9 @@
         // type: "nutrition",
         value: 6.1
     },
+    farmerID: 3,
+    nodeID: 3,
+    ID: 23
 },
 {
     sensorType: "nutrition",
@@ -262,6 +331,9 @@
         // type: "nutrition",
         value: null
     },
+    farmerID: 1,
+    nodeID: 4,
+    ID: 24
 },
 {
     sensorType: "nutrition",
@@ -273,6 +345,9 @@
         // type: "nutrition",
         value: 7.1
     },
+    farmerID: 3,
+    nodeID: 5,
+    ID: 25
 },
 {
     sensorType: "nutrition",
@@ -284,6 +359,9 @@
         // type: "nutrition",
         value: 5.3
     },
+    farmerID: 2,
+    nodeID: 6,
+    ID: 26
 },
 {
     sensorType: "nutrition",
@@ -295,6 +373,9 @@
         // type: "nutrition",
         value: null
     },
+    farmerID: 2,
+    nodeID: 7,
+    ID: 27
 },
 {
     sensorType: "nutrition",
@@ -306,6 +387,9 @@
         // type: "nutrition",
         value: 6.3
     },
+    farmerID: 1,
+    nodeID: 8,
+    ID: 28
 },
 {
     sensorType: "nutrition",
@@ -317,6 +401,9 @@
         // type: "nutrition",
         value: 8.2
     },
+    farmerID: 3,
+    nodeID: 9,
+    ID: 29
 },
 {
     sensorType: "nutrition",
@@ -328,6 +415,9 @@
         // type: "nutrition",
         value: 7.7
     },
+    farmerID: 1,
+    nodeID: 10,
+    ID: 30
 },
 {
     sensorType: "moisture",
@@ -339,6 +429,8 @@
         // type: "moisture",
         value: 30.39
     },
+    nodeID: 1,
+    ID: 31
 },
 {
     sensorType: "moisture",
@@ -350,6 +442,9 @@
         // type: "moisture",
         value: 24.06
     },
+    farmerID: 3,
+    nodeID: 2,
+    ID: 32
 },
 {
     sensorType: "moisture",
@@ -361,6 +456,9 @@
         // type: "moisture",
         value: 30.33
     },
+    farmerID: 1,
+    nodeID: 3,
+    ID: 33
 },
 {
     sensorType: "moisture",
@@ -372,6 +470,9 @@
         // type: "moisture",
         value: 23.81
     },
+    farmerID: 2,
+    nodeID: 4,
+    ID: 34
 },
 {
     sensorType: "moisture",
@@ -383,6 +484,9 @@
         // type: "moisture",
         value: 27.56
     },
+    farmerID: 2,
+    nodeID: 5,
+    ID: 35
 },
 {
     sensorType: "moisture",
@@ -394,6 +498,9 @@
         // type: "moisture",
         value: 19.47
     },
+    farmerID: 3,
+    nodeID: 6,
+    ID: 36
 },
 {
     sensorType: "moisture",
@@ -405,6 +512,9 @@
         // type: "moisture",
         value: 26.64
     },
+    farmerID: 3,
+    nodeID: 7,
+    ID: 37
 },
 {
     sensorType: "moisture",
@@ -416,6 +526,9 @@
         // type: "moisture",
         value: 19.44
     },
+    farmerID: 2,
+    nodeID: 8,
+    ID: 38
 },
 {
     sensorType: "moisture",
@@ -427,6 +540,9 @@
         // type: "moisture",
         value: 31.68
     },
+    farmerID: 1,
+    nodeID: 9,
+    ID: 39
 },
 {
     sensorType: "moisture",
@@ -438,5 +554,8 @@
         // type: "moisture",
         value: 24.31
     },
-},
+    farmerID: 1,
+    nodeID: 10,
+    ID: 40
+}
 ]
