@@ -6,9 +6,11 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 var cookieParser = require("cookie-parser");
 var cors = require("cors");
-const routes = require("./routeHandler/routes");
+// const routes = require("./routeHandler/routes");
 var { mongoose } = require("./configDB/db");
 const multer = require("multer");
+
+const mongo = require('./mongo')();
 
 //----------------------------------------S3----------------------------------------------
 app.use(function(req, res, next) {
@@ -95,6 +97,12 @@ app.use(
   })
 );
 
+//Routes ExpressJS
+
+const { users, iot } = require("./routeHandler");
+
+app.use("/users", users);
+app.use("/iot", iot);
 //Allow Access Control
 
 //Leaving some sample routes for reference. Compare with project to understand
@@ -108,6 +116,13 @@ app.use(
 //console.log("Resume Image : ", req.body);
 //res.send();
 //});
+
+//To list all routes in the application
+// app._router.stack.forEach(function(r){
+//   if (r.route && r.route.path){
+//     console.log(r.route.path)
+//   }
+// })
 
 app.listen(3001);
 console.log("Server Listening on port 3001");

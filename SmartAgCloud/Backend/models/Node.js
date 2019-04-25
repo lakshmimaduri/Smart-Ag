@@ -5,11 +5,13 @@ var Node = mongoose.model("Node", {
     status: {type: String},
     x_coordinate: {type: String},
     y_coordinate: {type: String},
-    farmerID: {type: Schema.Types.ObjectId},
+    farmerID: {type: Number},
+    //farmerID: {type: Schema.Types.ObjectId},
     sensor1_vacancy: {type: Boolean},
     sensor2_vacancy: {type: Boolean},
     sensor3_vacancy: {type: Boolean},
     sensor4_vacancy: {type: Boolean},
+    ID: {type: Number, unique:true, required:true}
 });
 
 module.exports = Node;
