@@ -11,8 +11,11 @@ var Sensor = mongoose.model("Sensor", {
         type: {type: String},
         value: {type: Number}
       },
-    farmerID: {type: Schema.Types.ObjectId},
-    nodeID: {type: Schema.Types.ObjectId}
+    farmerID: {type: Number},
+    //farmerID: {type: Schema.Types.ObjectId},
+    nodeID: {type: Number},
+    //nodeID: {type: Schema.Types.ObjectId},
+    ID: {type: Number}
 });
 
 module.exports = Sensor;
