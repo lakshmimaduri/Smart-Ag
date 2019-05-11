@@ -1,11 +1,8 @@
 const users = require("./users");
 const iot = require("./iot");
-// const pouches = require("./pouches");
-// const items = require("./items");
-// const login = require("./login");
-// const logout = require("./logout");
-// const register = require("./register");
+const nodes = require("./nodes");
+const sensors = require("./sensors");
 
-const Routes = { users, iot };
+const Routes = { users, iot, nodes, sensors };
 
 module.exports = Routes;

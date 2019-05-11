@@ -12,9 +12,20 @@ const multer = require("multer");
 
 const mongo = require('./mongo')();
 
+// const db = require('./config/db');
+
+//for mongo calls without kafka
+// try {
+//     db.connect();
+//     console.log("Mongo connected!")
+// }
+// catch (e) {
+//     console.log('Error connecting to Mongo Atlas: ->',e);
+// }
+
 //----------------------------------------S3----------------------------------------------
 app.use(function(req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Origin",
     "https://s3.us-east-2.amazonaws.com/linkedin-images"
@@ -74,7 +85,7 @@ var upload = multer({
 //require("./configDB/passport")(passport);
 
 //use cors to allow cross origin resource sharing
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -99,10 +110,12 @@ app.use(
 
 //Routes ExpressJS
 
-const { users, iot } = require("./routeHandler");
+const { users, iot, nodes, sensors } = require("./routeHandler");
 
 app.use("/users", users);
 app.use("/iot", iot);
+app.use("/nodes", nodes);
+app.use("/sensors", sensors);
 //Allow Access Control
 
 //Leaving some sample routes for reference. Compare with project to understand

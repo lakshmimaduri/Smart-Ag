@@ -48,3 +48,19 @@ var UserSchema = new Schema({
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
+
+/*
+  db.users.insert({username: "mickey",
+  password: "mickey",
+  passwordHash: { type: String, required: true },
+  email: "mickey@smartag",
+  userType: "farmer",
+  firstName: "mickey",
+  lastName: "mouse",
+  city: "citynew",
+  state: "statenew",
+  county: "countynew",
+  img: "https://image.shutterstock.com/image-photo/indian-farmer-holding-crop-plant-260nw-1116673256.jpg",
+  ID: 100
+  });
+*/
