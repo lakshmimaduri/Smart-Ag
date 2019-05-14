@@ -218,11 +218,12 @@ class FarmerSensors extends Component{
         console.log('is_faculty from props in All Courses page:',this.props.is_faculty);
         console.log('courses in course page:',this.props.courses);
         const farmerSensorItems = this.props.farmer_sensors.map((eachSensor)=>{
+            let spinner_class = eachSensor.status === "on" ? "led-green" : "led-red";
             return(
                 <tr>
                     {/* <td><NavLink to={{pathname:`/users/${this.props.match.params.userId}/courses/${eachCourse._id}`}} >{eachCourse.course_name}</NavLink></td> */}
                     <td>{eachSensor.ID}</td>
-                    <td>{eachSensor.status}</td>
+                    <td><div class={spinner_class}></div></td>
                     <td>{eachSensor.data.value}</td>
                 </tr>
             )

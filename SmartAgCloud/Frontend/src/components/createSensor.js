@@ -29,15 +29,16 @@ class CreateSensor extends Component{
     }
 
     onSensorNameChange = (e) => {
-        this.state.sensor_name = e.target.value
+        this.setState({sensor_name:e.target.value})
     }
 
     onSensorTypeChange = (e) => {
-        this.state.sensor_type = e.target.value
+        console.log("onSensorTypeChange:->",e.target.value);
+        this.setState({sensor_type:e.target.value})
     }
 
     onSensorDescChange = (e) => {
-        this.state.sensor_desc = e.target.value
+        this.setState({sensor_desc : e.target.value})
     }
 
     onSubmitHandler = (e) => {
@@ -50,6 +51,7 @@ class CreateSensor extends Component{
             sensor_desc: this.state.sensor_desc,
             sensor_type: this.state.sensor_type
         }
+        console.log('Data being sent to backend on CreateSensor action:->',data);
         this.props.createSensor(data,()=>{
             this.props.history.push(`/users/${this.props.match.params.userId}/sensors`);
         });
@@ -101,11 +103,11 @@ class CreateSensor extends Component{
                         <form method="post">
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Sensor Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name your sensor"/>
+                                    <input type="text" name="sensor_name" onChange={this.onSensorNameChange} class="form-control" id="exampleFormControlInput1" placeholder="Name your sensor"/>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">Sensor Type</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <select class="form-control" defaultValue="Humidity" onChange={this.onSensorTypeChange} id="exampleFormControlSelect1">
                                         <option>Humidity</option>
                                         <option>Moisture</option>
                                         <option>Soil Nutrition</option>
@@ -114,7 +116,7 @@ class CreateSensor extends Component{
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Description</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Describe your sensor"></textarea>
+                                <textarea name="sensor_desc" onChange={this.onSensorDescChange} class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Describe your sensor"></textarea>
                             </div>
                             <input type="submit" onClick={this.onSubmitHandler} class="btn btn-md btn-success" value="Add Sensor"/>
                         </form>
@@ -131,4 +133,4 @@ const mapStateToProps = (state) => ({
     eachFarmer:state.eachFarmer,
 });
 
-export default connect(mapStateToProps, {fetchEachFarmer})(CreateSensor);
+export default connect(mapStateToProps, {createSensor, fetchEachFarmer})(CreateSensor);

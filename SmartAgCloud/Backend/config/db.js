@@ -1,27 +1,39 @@
-const mongoose = require("mongoose");
-mongoose.Promise = require("bluebird");
+// // const mongoose = require("mongoose");
+// // mongoose.Promise = require("bluebird");
 
-mongoose.connection.on("connected", () => {
-  console.log("MongoDB is connected SAC");
-});
+// // mongoose.connection.on("connected", () => {
+// //   console.log("MongoDB is connected SAC");
+// // });
 
-mongoose.connection.on("error", err => {
-  console.log(`Could not connect to MongoDB because of ${err}`);
-  process.exit(-1);
-});
+// // mongoose.connection.on("error", err => {
+// //   console.log(`Could not connect to MongoDB because of ${err}`);
+// //   process.exit(-1);
+// // });
 
-mongoose.set("debug", true);
+// // mongoose.set("debug", true);
 
-exports.connect = () => {
-  var mongoURI =
-    // "mongodb+srv://ankita:ankita@cluster0-fdzjx.mongodb.net/test?retryWrites=true";
-    "mongodb+srv://lakshmi:Perseveranc!1@canvascluster-xh7zy.mongodb.net/test?retryWrites=true";
+// // exports.connect = () => {
+// //   var mongoURI =
+// //     // "mongodb+srv://ankita:ankita@cluster0-fdzjx.mongodb.net/test?retryWrites=true";
+// //     "mongodb+srv://lakshmi:Perseveranc!1@canvascluster-xh7zy.mongodb.net/test?retryWrites=true";
 
-  mongoose.connect(mongoURI, {
-    keepAlive: 1,
-    useNewUrlParser: true
-  });
+// //   mongoose.connect(mongoURI, {
+// //     keepAlive: 1,
+// //     useNewUrlParser: true
+// //   });
 
-  return mongoose.connection;
-};
+// //   return mongoose.connection;
+// // };
+
+
+// {
+//   "development":{
+//       "database": "smartag_development",
+//       "host": "localhost"
+//   },
+//   "test":{
+//       "database": "smartag_test",
+//       "host": "localhost"
+//   }
+// }
 

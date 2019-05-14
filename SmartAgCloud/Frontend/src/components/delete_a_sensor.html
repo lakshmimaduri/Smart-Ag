@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>IOT Dashboard</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="sidebar-nav main-navigation">
+                <ul class="nav menu-font">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon cui-speedometer"></i><img class="myimg" src="logoSAC.png">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="IOTDashboard.html">
+                            <i class="nav-icon cui-speedometer"></i>List Of Farmers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add_a_sensor.html">
+                            <i class="nav-icon cui-speedometer"></i>Add A Sensor
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="nav-icon cui-speedometer"></i>Delete A Sensor
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view_sensor_data.html">
+                            <i class="nav-icon cui-speedometer"></i>View Sensor Data
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="nav-icon cui-speedometer"></i>Library
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br/><br/>
+			<div class="row">
+	            <div class="col-md-1">
+	            </div>
+	            <div class="col-md-11">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Sensor Type</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Humidity</option>
+                                    <option>Moisture</option>
+                                    <option>Soil Nutrition</option>
+                                    <option>Temperature</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                                <label for="exampleFormControlInput1">Sensor Name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name your sensor">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Reason For Deletion</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-md btn-success" value="Delete Sensor"/>
+                    </form>
+                </div>
+			</div>
+		</div>
+	</body>
+</html>
+
