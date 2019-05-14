@@ -154,10 +154,10 @@ var session = require("express-session");
 var cookieParser = require("cookie-parser");
 var cors = require("cors");
 // const routes = require("./routeHandler/routes");
-var { mongoose } = require("./configDB/db");
+// var { mongoose } = require("./configDB/db");
 const multer = require("multer");
 
-const mongo = require('./mongo')();
+// const mongo = require('./mongo')();
 
 //mongodb+srv://maahiSAC:<password>@cluster0-hueue.mongodb.net/test?retryWrites=true
 
