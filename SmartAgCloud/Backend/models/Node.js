@@ -10,7 +10,7 @@ var Node = mongoose.model("Node", {
     humidity_sensor_vacancy: {type: Boolean},
     temperature_sensor_vacancy: {type: Boolean},
     moisture_sensor_vacancy: {type: Boolean},
-    soil_nutrition_vacancy: {type: Boolean},
+    soil_nutrition_sensor_vacancy: {type: Boolean},
     ID: {type: Number, unique:true, required:true}
 });
 

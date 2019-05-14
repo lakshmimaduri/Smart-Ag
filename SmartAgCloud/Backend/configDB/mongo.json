@@ -1,10 +1,10 @@
 {
     "development":{
         "database": "smartag_development",
-        "host": "localhost"
+        "host": "13.52.178.227"
     },
     "test":{
         "database": "smartag_test",
-        "host": "localhost"
+        "host": "13.52.178.227"
     }
 }

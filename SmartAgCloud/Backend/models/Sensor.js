@@ -6,16 +6,18 @@ var Sensor = mongoose.model("Sensor", {
     status: {type: "String"},
     x_coordinate: {type: Number},
     y_coordinate: {type: Number},
-    // data: {
-    //     timestamp: ISODate(),
-    //     type: {type: String},
-    //     value: {type: Number}
-    //   },
+    data: {
+        //timestamp: ISODate(),
+        type: {type: String},
+        value: {type: Number}
+      },
     farmerID: {type: Number},
     //farmerID: {type: Schema.Types.ObjectId},
     nodeID: {type: Number},
     //nodeID: {type: Schema.Types.ObjectId},
-    ID: {type: Number}
+    ID: {type: Number},
+    sensor_desc:{type: String},
+    sensor_name: {type: String}
 });
 
 module.exports = Sensor;

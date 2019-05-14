@@ -129,7 +129,7 @@ router.post('/:id/nodes', async (req, res)=>{
         humidity_sensor_vacancy: true,
         temperature_sensor_vacancy: true,
         moisture_sensor_vacancy: true,
-        soil_nutrition_vacancy: true,
+        soil_nutrition_sensor_vacancy: true,
         ID: node_count+1
     });
     new_node.save()
@@ -147,11 +147,14 @@ router.post('/:id/sensors', async (req, res)=>{
     try{
         let farmerID = Number(req.params.id);
         //let nodeId = req.params.nodeId;
-        let sensorType = req.body.sensorType;
+        let sensorType = req.body.sensor_type;
         //let status = req.body.status;
         let x_coordinate = req.body.x_coordinate;
         let y_coordinate = req.body.y_coordinate;
+        let sensor_name = req.body.sensor_name;
+        let sensor_desc = req.body.sensor_desc;
         let sensor_count = await Sensor.count();
+        let random_data = Math.random()*100;
         console.log('Sensor count:->', sensor_count);
         if(sensorType === "Humidity"){
             let vacant_nodes = await Node.find({humidity_sensor_vacancy: true});
@@ -165,7 +168,13 @@ router.post('/:id/sensors', async (req, res)=>{
                     y_coordinate: y_coordinate,
                     farmerID: farmerID,
                     nodeID: vacant_nodes[0].ID,
-                    ID: sensor_count+1
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"g/m3",
+                        value:random_data
+                    }
                 })
                 await new_sensor.save();
                 vacant_nodes[0].humidity_sensor_vacancy = false;
@@ -183,7 +192,7 @@ router.post('/:id/sensors', async (req, res)=>{
                     humidity_sensor_vacancy: true,
                     temperature_sensor_vacancy: true,
                     moisture_sensor_vacancy: true,
-                    soil_nutrition_vacancy: true,
+                    soil_nutrition_sensor_vacancy: true,
                     ID: node_count+1
                 });
                 await new_node.save();
@@ -194,36 +203,208 @@ router.post('/:id/sensors', async (req, res)=>{
                     y_coordinate: y_coordinate,
                     farmerID: farmerID,
                     nodeID: new_node.ID,
-                    ID: sensor_count+1
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"g/m3",
+                        value:random_data
+                    }
                 })
                 new_node.humidity_sensor_vacancy = false;
                 await new_node.save();
                 await new_sensor.save();
                 console.log('Newly created node: ->',new_node);
                 res.status(200).json({"sensor_node":new_node, "new_sensor":new_sensor})
+            
+        }
+        }else if(sensorType === "Temperature"){
+            let vacant_nodes = await Node.find({temperature_sensor_vacancy: true});
+            console.log('vacant nodes: -> ', vacant_nodes);
+            if(vacant_nodes.length !== 0){
+                console.log('some vacant nodes exist');
+                let new_sensor = await new Sensor({
+                    sensorType: sensorType,
+                    status: "on",
+                    x_coordinate: x_coordinate,
+                    y_coordinate: y_coordinate,
+                    farmerID: farmerID,
+                    nodeID: vacant_nodes[0].ID,
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"F",
+                        value:random_data
+                    }
+                })
+                await new_sensor.save();
+                vacant_nodes[0].temperature_sensor_vacancy = false;
+                await vacant_nodes[0].save();
+                console.log('Temperature sensor vacancies: ->',vacant_nodes[0]);
+                res.status(200).json({"sensor_node":vacant_nodes[0], "new_sensor":new_sensor})
+            }else{
+                console.log("***No nodes with vacancy of this sensor type!***");
+                let node_count = await Node.count();
+                let new_node = await new Node({
+                    status: "on",
+                    x_coordinate: req.body.x_coordinate,
+                    y_coordinate: req.body.y_coordinate,
+                    farmerID: farmerID,
+                    humidity_sensor_vacancy: true,
+                    temperature_sensor_vacancy: true,
+                    moisture_sensor_vacancy: true,
+                    soil_nutrition_sensor_vacancy: true,
+                    ID: node_count+1,
+                });
+                await new_node.save();
+                let new_sensor = await new Sensor({
+                    sensorType: sensorType,
+                    status: "on",
+                    x_coordinate: x_coordinate,
+                    y_coordinate: y_coordinate,
+                    farmerID: farmerID,
+                    nodeID: new_node.ID,
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"F",
+                        value:random_data
+                    }
+                })
+                new_node.temperature_sensor_vacancy = false;
+                await new_node.save();
+                await new_sensor.save();
+                console.log('Newly created node: ->',new_node);
+                res.status(200).json({"sensor_node":new_node, "new_sensor":new_sensor})
             }
+        }else if(sensorType === "Soil Nutrition"){
+            let vacant_nodes = await Node.find({temperature_sensor_vacancy: true});
+            console.log('vacant nodes: -> ', vacant_nodes);
+            if(vacant_nodes.length !== 0){
+                console.log('some vacant nodes exist');
+                let new_sensor = await new Sensor({
+                    sensorType: sensorType,
+                    status: "on",
+                    x_coordinate: x_coordinate,
+                    y_coordinate: y_coordinate,
+                    farmerID: farmerID,
+                    nodeID: vacant_nodes[0].ID,
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"pH",
+                        value:Math.random()*14
+                    }
+                })
+                await new_sensor.save();
+                vacant_nodes[0].soil_nutrition_sensor_vacancy = false;
+                await vacant_nodes[0].save();
+                console.log('Soil Nutrition sensor vacancies: ->',vacant_nodes[0]);
+                res.status(200).json({"sensor_node":vacant_nodes[0], "new_sensor":new_sensor})
+            }else{
+                console.log("***No nodes with vacancy of this sensor type!***");
+                let node_count = await Node.count();
+                let new_node = await new Node({
+                    status: "on",
+                    x_coordinate: req.body.x_coordinate,
+                    y_coordinate: req.body.y_coordinate,
+                    farmerID: farmerID,
+                    humidity_sensor_vacancy: true,
+                    temperature_sensor_vacancy: true,
+                    moisture_sensor_vacancy: true,
+                    soil_nutrition_sensor_vacancy: true,
+                    ID: node_count+1
+                });
+                await new_node.save();
+                let new_sensor = await new Sensor({
+                    sensorType: sensorType,
+                    status: "on",
+                    x_coordinate: x_coordinate,
+                    y_coordinate: y_coordinate,
+                    farmerID: farmerID,
+                    nodeID: new_node.ID,
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc
+                })
+                new_node.soil_nutrition_sensor_vacancy = false;
+                await new_node.save();
+                await new_sensor.save();
+                console.log('Newly created node: ->',new_node);
+                res.status(200).json({"sensor_node":new_node, "new_sensor":new_sensor})
+            }
+        }else if(sensorType === "Moisture"){
+            let vacant_nodes = await Node.find({temperature_sensor_vacancy: true});
+            console.log('vacant nodes: -> ', vacant_nodes);
+            if(vacant_nodes.length !== 0){
+                console.log('some vacant nodes exist');
+                let new_sensor = await new Sensor({
+                    sensorType: sensorType,
+                    status: "on",
+                    x_coordinate: x_coordinate,
+                    y_coordinate: y_coordinate,
+                    farmerID: farmerID,
+                    nodeID: vacant_nodes[0].ID,
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"g/m3",
+                        value:random_data
+                    }
+                })
+                await new_sensor.save();
+                vacant_nodes[0].moisture_sensor_vacancy = false;
+                await vacant_nodes[0].save();
+                console.log('Soil Nutrition sensor vacancies: ->',vacant_nodes[0]);
+                res.status(200).json({"sensor_node":vacant_nodes[0], "new_sensor":new_sensor})
+            }else{
+                console.log("***No nodes with vacancy of this sensor type!***");
+                let node_count = await Node.count();
+                let new_node = await new Node({
+                    status: "on",
+                    x_coordinate: req.body.x_coordinate,
+                    y_coordinate: req.body.y_coordinate,
+                    farmerID: farmerID,
+                    humidity_sensor_vacancy: true,
+                    temperature_sensor_vacancy: true,
+                    moisture_sensor_vacancy: true,
+                    soil_nutrition_sensor_vacancy: true,
+                    ID: node_count+1
+                });
+                await new_node.save();
+                let new_sensor = await new Sensor({
+                    sensorType: sensorType,
+                    status: "on",
+                    x_coordinate: x_coordinate,
+                    y_coordinate: y_coordinate,
+                    farmerID: farmerID,
+                    nodeID: new_node.ID,
+                    ID: sensor_count+1,
+                    sensor_name: sensor_name,
+                    sensor_desc: sensor_desc,
+                    data: {
+                        type:"g/m3",
+                        value:random_data
+                    }
+                })
+                new_node.soil_nutrition_sensor_vacancy = false;
+                await new_node.save();
+                await new_sensor.save();
+                console.log('Newly created node: ->',new_node);
+                res.status(200).json({"sensor_node":new_node, "new_sensor":new_sensor})
+            }
+        }else{
+            console.log("The type of sensor you entered does not exist!");
+            res.status(400).json({"message":"Failure!"});
         }
     }catch(err){
         console.log("Error: ",err);
         res.status(400).json({"message":"Failure!"});
     } 
-    // let new_sensor = await new Sensor({
-    //     sensorType: sensorType,
-    //     status: status,
-    //     x_coordinate: x_coordinate,
-    //     y_coordinate: y_coordinate,
-    //     farmerID: farmerID,
-    //     nodeID: req.params.nodeId,
-    //     ID: sensor_count+1
-    // });
-    // new_sensor.save();
-    // .then((result)=>{
-    //     console.log("Successfully added node to teh farmer's farm:", result);
-    //     res.status(200).json({new_farmer_node: result});
-    // })
-    // .catch((err)=>{
-    //     console.log(err);
-    // })
 })
 
 //GET all sensors for a particular node for the farmer

@@ -7,21 +7,23 @@ var session = require("express-session");
 var cookieParser = require("cookie-parser");
 var cors = require("cors");
 // const routes = require("./routeHandler/routes");
-var { mongoose } = require("./configDB/db");
+//var { mongoose } = require("./configDB/db");
 const multer = require("multer");
 
-const mongo = require('./mongo')();
+// const mongo = require('./mongo')();
 
-// const db = require('./config/db');
+//mongodb+srv://maahiSAC:<password>@cluster0-hueue.mongodb.net/test?retryWrites=true
+
+const db = require('./config/db');
 
 //for mongo calls without kafka
-// try {
-//     db.connect();
-//     console.log("Mongo connected!")
-// }
-// catch (e) {
-//     console.log('Error connecting to Mongo Atlas: ->',e);
-// }
+try {
+    db.connect();
+    console.log("Mongo connected!")
+}
+catch (e) {
+    console.log('Error connecting to Mongo Atlas: ->',e);
+}
 
 //----------------------------------------S3----------------------------------------------
 app.use(function(req, res, next) {
